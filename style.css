@@ -14,11 +14,12 @@
     --grey-700: hsl(0, 0%, 20%);
     --grey-800: hsl(0, 0%, 12%);
     --grey-900: hsl(0, 0%, 8%);
+    --off-white: #f2f2f2;
 
-    --fonte-titulo: 600 25px 'Inter', sans-serif;
-    --fonte-subtitulo: 700 14px 'Inter', sans-serif;
-    --fonte-texto: 400 14px 'Inter', sans-serif;
-    --fonte-links: 700 14px 'Inter', sans-serif;
+    --fonte-titulo: 600 1.5625rem 'Inter', sans-serif;
+    --fonte-subtitulo: 700 0.875rem 'Inter', sans-serif;
+    --fonte-texto: 400 0.875rem/1.5 'Inter', sans-serif;
+    --fonte-links: 700 0.875rem 'Inter', sans-serif;
 
 }
 
@@ -31,7 +32,7 @@ body {
     justify-content: center;    
     color: var(--white);
     position: relative;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .card {
@@ -39,18 +40,18 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--grey-800);
-    border-radius: 10px;
-    gap: 24px;
-    width: 385px;
+    border-radius: 0.625rem;
+    gap: 1.5rem;
+    width: 24.0625rem;
     max-width: 100%;
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 .bio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .avatar {
@@ -58,13 +59,13 @@ body {
     margin-right: auto;
     object-fit: cover;
     border-radius: 50%;
-    width: 90px;
+    width: 5.625rem;
 }
 
 .infos {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
 }
 
@@ -86,7 +87,7 @@ body {
 .lista-links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     align-items: center;
     width: 100%;
 }
@@ -99,24 +100,28 @@ body {
     background-color: var(--grey-700);
     display: block;
     color: var(--white);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     transition: 0.3s;
     text-align: center;
-    padding: 14px;
+    padding: 0.875rem;
     font: var(--fonte-links);    
 }
 
 footer {
     position: absolute;
-    bottom: 10px;
-    padding: 20px;
+    bottom: 0.3125rem;
+    padding: 1.25rem;
     font: var(--fonte-texto);
     text-align: center;
     width: 100%;
+    color: var(--off-white);
 }
 
 footer a {
         color: var(--white);
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s;
     }
 
 @media (hover: hover) {
@@ -129,5 +134,19 @@ footer a {
   
     footer a:hover {
         color: var(--verde);
+        border-bottom: 1px solid var(--verde);
+    }
+}
+
+@media (max-height: 50rem) {
+    body  {
+        justify-content: flex-start;
+        padding-top: 2.5rem;
+    }
+
+    footer {
+        position: static;
+        margin-top: 2.5rem;
+        padding-bottom: 1.25rem;
     }
 }
