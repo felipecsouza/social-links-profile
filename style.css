@@ -20,6 +20,7 @@
     --fonte-subtitulo: 700 0.875rem 'Inter', sans-serif;
     --fonte-texto: 400 0.875rem/1.5 'Inter', sans-serif;
     --fonte-links: 700 0.875rem 'Inter', sans-serif;
+    --fonte-footer: 400 0.75rem 'Inter', sans-serif;
 
 }
 
@@ -107,17 +108,17 @@ body {
     font: var(--fonte-links);    
 }
 
-footer {
+.attribution {
     position: absolute;
     bottom: 0.3125rem;
     padding: 1.25rem;
-    font: var(--fonte-texto);
+    font: var(--fonte-footer);
     text-align: center;
     width: 100%;
     color: var(--off-white);
 }
 
-footer a {
+.attribution a {
         color: var(--white);
         font-weight: 700;
         border-bottom: 1px solid transparent;
@@ -132,7 +133,7 @@ footer a {
         transform: scale(1.02);
     }
   
-    footer a:hover {
+    .attribution a:hover {
         color: var(--verde);
         border-bottom: 1px solid var(--verde);
     }
@@ -144,9 +145,21 @@ footer a {
         padding-top: 2.5rem;
     }
 
-    footer {
+    .attribution {
         position: static;
         margin-top: 2.5rem;
         padding-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .attribution {
+        font-size: 0.625rem;
     }
 }
